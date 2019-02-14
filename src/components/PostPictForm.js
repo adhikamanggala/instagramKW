@@ -28,23 +28,25 @@ class PostPictForm extends Component {
         return (
             <Container>
                 <Header>
-                    <Title>Instagram</Title>
+                    <Body>
+                        <Title>Instagram</Title>
+                    </Body>
                 </Header>
                 <View>
                     <CardSection>
                         <Input
-                            label="photo"
-                            placeholder="Paste Link Here"
-                            value={this.props.photo}
-                            onChangeText={this.onPhotoChange}
+                            label="Caption"
+                            placeholder="Put Caption Here"
+                            value={this.props.caption}
+                            onChangeText={this.onCaptionChange}
                         />
                     </CardSection>
                     <CardSection>
                         <Input
-                            label="caption"
-                            placeholder="Caption"
-                            value={this.props.caption}
-                            onChangeText={this.onCaptionChange}
+                            label="Photo"
+                            placeholder="Image URL"
+                            value={this.props.photo}
+                            onChangeText={this.onPhotoChange}
                         />
                     </CardSection>
                     <CardSection>

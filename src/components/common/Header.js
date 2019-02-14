@@ -27,6 +27,6 @@ const styles = {
     textStyle: {
         fontSize: 25
     }
-  };
+};
 
 export { Header };

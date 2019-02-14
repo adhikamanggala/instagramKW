@@ -35,12 +35,14 @@ class Profile extends Component {
         return (
             <Container>
                 <Header>
-                    <Title>Instagram</Title>
+                    <Body>
+                        <Title>Instagram</Title>
+                    </Body>
                 </Header>
                 <View >
                     <Card>
                         <CardSection>
-                            <Text>Email: {this.state.email}</Text>
+                            <Text>Logged In: {this.state.email}</Text>
                         </CardSection>
                         <CardSection>
                             <Button onPress={this.logOut}>

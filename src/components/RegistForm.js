@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import {Container, Header, Left, Title, Body, Right} from 'native-base'
+import { Container, Header, Left, Title, Body, Right } from 'native-base'
 import { connect } from 'react-redux';
 import { Card, CardSection, Input, Button, Spinner } from './common';
 import { emailChanged, passwordChanged, registUser } from '../actions';
-import {Icon} from 'react-native-elements'
+import { Icon } from 'react-native-elements'
 class RegistForm extends Component {
 
 
@@ -41,7 +41,7 @@ class RegistForm extends Component {
 
         return (
             <Button onPress={this.onButtonPress}>
-                Daftar
+                Sign Up
             </Button>
         );
     }
@@ -51,46 +51,46 @@ class RegistForm extends Component {
             <Container>
                 <Header >
                     <Left>
-                    <Icon name='arrow-back' color='white' onPress={() => this.props.navigation.goBack()} />
+                        <Icon name='arrow-back' color='white' onPress={() => this.props.navigation.goBack()} />
                     </Left>
                     <Body>
-                        <Title>Daftar</Title>
+                        <Title>Sign Up</Title>
                     </Body>
                     <Right></Right>
                 </Header>
-                
-                            
-            <View>
-                {/* <Header
+
+
+                <View>
+                    {/* <Header
                     centerComponent={{ text: 'Daftar disini', style: { color: '#fff' } }}
                 /> */}
-                <Card>
-                    <CardSection>
-                        <Input
-                            label="Email"
-                            placeholder="email@email.com"
-                            onChangeText={this.onEmailChange}
-                            value={this.props.email}
-                        />
-                    </CardSection>
-                    <CardSection>
-                        <Input
-                            secureTextEntry
-                            label="Password"
-                            placeholder="password"
-                            onChangeText={this.onPasswordChange}
-                            value={this.props.password}
-                        />
-                    </CardSection>
-                    {this.renderError()}
-                    <CardSection>
-                        {this.renderButton()}
-                    </CardSection>
-                    <CardSection>
-                        <Button title="Login Disini" onPress={() => this.props.navigation.goBack()}>Login Disini</Button>
-                    </CardSection>
-                </Card>
-            </View>
+                    <Card>
+                        <CardSection>
+                            <Input
+                                label="Email"
+                                placeholder="email@email.com"
+                                onChangeText={this.onEmailChange}
+                                value={this.props.email}
+                            />
+                        </CardSection>
+                        <CardSection>
+                            <Input
+                                secureTextEntry
+                                label="Password"
+                                placeholder="password"
+                                onChangeText={this.onPasswordChange}
+                                value={this.props.password}
+                            />
+                        </CardSection>
+                        {this.renderError()}
+                        <CardSection>
+                            {this.renderButton()}
+                        </CardSection>
+                        <CardSection>
+                            <Button title="Login Disini" onPress={() => this.props.navigation.goBack()}>Log In</Button>
+                        </CardSection>
+                    </Card>
+                </View>
             </Container>
         );
     }
@@ -110,4 +110,4 @@ const mapStateToProps = (state) => {
     return { email, password, error, loading, user };
 };
 
-export default connect(mapStateToProps, { emailChanged, passwordChanged, registUser})(RegistForm);
+export default connect(mapStateToProps, { emailChanged, passwordChanged, registUser })(RegistForm);

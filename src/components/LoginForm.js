@@ -66,10 +66,11 @@ class LoginForm extends Component {
         return (
             <Container>
                 <Header >
-                    <Title>Instagram</Title>
+                    <Body>
+                        <Title align="center">Please Log In</Title>
+                    </Body>
                 </Header>
                 <View>
-                    <Text style={styles.titleTextStyle}>Login Disini</Text>
                     <Card>
 
                         <CardSection>
@@ -94,7 +95,7 @@ class LoginForm extends Component {
                             {this.renderButton()}
                         </CardSection>
                         <CardSection>
-                            <Button title="Registrasi disini" onPress={() => this.props.navigation.navigate('Regist')}>Registrasi disini</Button>
+                            <Button title="Registrasi disini" onPress={() => this.props.navigation.navigate('Regist')}>Sign Up</Button>
                         </CardSection>
                     </Card>
                 </View>
